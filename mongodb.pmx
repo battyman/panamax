@@ -1,0 +1,20 @@
+---
+name: mongodb
+description: configuration for mongodb
+keywords: ''
+type: Default
+documentation: ''
+images:
+- name: tutum_mongodb_latest
+  source: tutum/mongodb:latest
+  type: Default
+  ports:
+  - host_port: '27017'
+    container_port: '27017'
+    proto: TCP
+  - host_port: '28017'
+    container_port: '28017'
+    proto: TCP
+  environment:
+  - variable: MONGODB_PASS
+    value: '123456'
